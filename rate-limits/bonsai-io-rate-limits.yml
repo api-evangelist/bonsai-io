@@ -1,0 +1,16 @@
+name: Bonsai Cloud API Rate Limits
+generated: '2026-10-14'
+method: searched
+source: https://bonsai.io/docs/api/errors/429-too-many-requests/
+limits:
+- name: Per-token request limit
+  limit_text: 60 requests per minute for each token, of which at most 5 can create clusters
+  max: 60
+  limit: 60
+  window: minute
+  scope: per-token
+- name: Failed authentication lockout
+  limit_text: Too many failed authentication attempts. Try again later.
+  scope: per-ip
+exhaustion_status: 429
+note: 'Docs: We are rolling these limits out gradually, so a request over a limit may still be served for now.'

@@ -1,0 +1,27 @@
+name: Bonsai API Token Scopes
+generated: '2026-10-14'
+method: searched
+source: https://bonsai.io/docs/account/api-tokens
+docs: https://bonsai.io/docs/account/api-tokens
+scopes:
+- name: account:read
+  description: List and read the plans, spaces and releases available to the account (the Plans , Spaces and Releases APIs).
+  operations:
+  - listPlans
+  - getPlan
+  - listReleases
+  - getRelease
+  - listSpaces
+  - getSpace
+- name: clusters:read
+  description: List and read the account's clusters.
+  operations:
+  - listClusters
+  - getCluster
+- name: clusters:write
+  description: Create, update and delete clusters.
+  operations:
+  - createCluster
+  - updateCluster
+  - deleteCluster
+note: 'A new token is read-only by default: account:read and clusters:read are checked, and clusters:write is not. Bonsai tokens are scoped API tokens, not OAuth 2.0.'

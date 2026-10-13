@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bonsai-io/main/json-schema/bonsai-io-cluster-schema.json",
+  "title": "Cluster",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/bonsai-io-openapi-generated.yml#/components/schemas/Cluster",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "plan": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "uri": {
+          "type": "string"
+        }
+      }
+    },
+    "release": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "package_name": {
+          "type": "string"
+        },
+        "service_type": {
+          "type": "string"
+        },
+        "uri": {
+          "type": "string"
+        }
+      }
+    },
+    "space": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "uri": {
+          "type": "string"
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "docs": {
+          "type": "integer"
+        },
+        "shards_used": {
+          "type": "integer"
+        },
+        "data_bytes_used": {
+          "type": "integer"
+        }
+      }
+    },
+    "access": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer"
+        },
+        "scheme": {
+          "type": "string"
+        }
+      }
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "DEPROVISIONED",
+        "DEPROVISIONING",
+        "DISABLED",
+        "MAINTENANCE",
+        "PROVISIONED",
+        "PROVISIONING",
+        "READONLY",
+        "UPDATING PLAN"
+      ]
+    }
+  }
+}

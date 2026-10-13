@@ -1,0 +1,112 @@
+generated: '2026-10-14'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 6
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - docs
+  - identity
+  - other
+  - source
+  - status
+  - website
+hosts:
+- host: api.bonsai.io
+  found_by:
+  - apis[]
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: bonsai.io
+  role: api
+  relation: own
+- host: app.bonsai.io
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  - SignUp
+  serves: []
+  registrable_domain: bonsai.io
+  role: identity
+  relation: own
+- host: bonsai.io
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - Documentation
+  - APIReference
+  - GettingStarted
+  - Blog
+  - Pricing
+  - PrivacyPolicy
+  - TermsOfService
+  - Support
+  serves:
+  - docs
+  registrable_domain: bonsai.io
+  role: website
+  relation: own
+- host: docs.bonsai.io
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  title: Bonsai Documentation • Bonsai Documentation
+  status: 200
+  registrable_domain: bonsai.io
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: sprout.bonsai.io
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bonsai.io
+  role: other
+  relation: own
+- host: status.bonsai.io
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bonsai.io
+  role: status
+  relation: own

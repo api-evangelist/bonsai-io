@@ -1,23 +1,140 @@
 aid: bonsai-io
 name: Bonsai
-description: 'Bonsai is a company surfaced via the API Evangelist harvest backlog (source: market-gap:search-api)
-  and added to the network as a stub for full-pipeline profiling.'
+description: Bonsai, made by One More Cloud, is a fully managed hosted Elasticsearch and OpenSearch search service (managed or bring-your-own-cloud on AWS and Google Cloud), with vector search, a Heroku add-on and a Terraform provider. Its Bonsai Cloud REST API at https://api.bonsai.io (alpha) manages clusters and lists plans, releases (search engine versions) and spaces (regions), authenticated with Basic or Bearer API tokens.
 url: https://raw.githubusercontent.com/api-evangelist/bonsai-io/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:market-gap:search-api
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (local-v5; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-13'
-modified: '2026-10-13'
+modified: '2026-10-14'
 tags:
 - Company
-apis: []
+- Search
+- Elasticsearch
+- OpenSearch
+- Managed Services
+- Vector Search
+- Cloud Infrastructure
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+image: https://cdn.prod.website-files.com/63c81e4decde60c281417feb/6807c033856de7919fd4ad83_opengraph-home.jpg
 common:
+- type: RateLimits
+  url: rate-limits/bonsai-io-rate-limits.yml
+- type: Plans
+  url: plans/bonsai-io-plans-pricing.yml
+- type: Spectral
+  url: rules/bonsai-io-rules.yml
+- type: JSONLD
+  url: json-ld/bonsai-io-context.jsonld
+- type: Vocabulary
+  url: vocabulary/bonsai-io-vocabulary.yml
+- type: DataModel
+  url: data-model/bonsai-io-data-model.yml
+- type: Conventions
+  url: conventions/bonsai-io-conventions.yml
+- type: Authentication
+  url: authentication/bonsai-io-authentication.yml
+- type: OAuthScopes
+  url: scopes/bonsai-io-scopes.yml
+- type: Lifecycle
+  url: lifecycle/bonsai-io-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/bonsai-io-problem-types.yml
+- type: Conformance
+  url: conformance/bonsai-io-conformance.yml
+- type: SecurityTxt
+  url: well-known/bonsai-io-status-security.txt
+- type: WellKnown
+  url: well-known/bonsai-io-well-known.yml
+- type: Hosts
+  url: hosts/bonsai-io-hosts.yml
+- type: Vendors
+  url: vendors/bonsai-io-vendors.yml
+- type: SDKs
+  url: packages/bonsai-io-packages.yml
+- type: Packages
+  url: packages/bonsai-io-packages.yml
+- type: StatusPage
+  url: https://status.bonsai.io/
+- type: Security
+  url: https://bonsai.io/security
+- type: DomainSecurity
+  url: security/bonsai-io-domain-security.yml
 - type: Website
   url: https://bonsai.io
+- type: Documentation
+  url: https://bonsai.io/docs
+- type: APIReference
+  url: https://bonsai.io/docs/api/reference/
+- type: GettingStarted
+  url: https://bonsai.io/docs/get-started/
+- type: Blog
+  url: https://bonsai.io/blog
+- type: GitHubOrganization
+  url: https://github.com/omc
+- type: Login
+  url: https://app.bonsai.io/login
+- type: SignUp
+  url: https://app.bonsai.io/signup
+- type: Pricing
+  url: https://bonsai.io/pricing
+- type: PrivacyPolicy
+  url: https://bonsai.io/privacy
+- type: TermsOfService
+  url: https://bonsai.io/terms
+- type: Support
+  url: https://bonsai.io/support
+apis:
+- aid: bonsai-io:bonsai-cloud-api
+  name: Bonsai Cloud API
+  description: REST API for managing Bonsai clusters and exploring plans, releases (Elasticsearch/OpenSearch versions) and spaces (regions). Currently in alpha.
+  humanURL: https://bonsai.io/docs/api/overview/
+  baseURL: https://api.bonsai.io
+  tags:
+  - Search
+  - Elasticsearch
+  - OpenSearch
+  - Clusters
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/bonsai-io-openapi-generated.yml
+    x-provenance: generated
+  - type: Documentation
+    url: https://bonsai.io/docs/api/overview/
+  - type: APIReference
+    url: https://bonsai.io/docs/api/reference/
+  - type: Authentication
+    url: https://bonsai.io/docs/api/authentication/overview/
+  - type: JSONSchema
+    url: json-schema/bonsai-io-cluster-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-plan-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-space-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-release-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-pagination-schema.json
+x-coverage:
+  state: gated
+  reason: partner-login
+  method: derived
+  generated: '2026-10-14'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company serves an API surface but requires credentials before any description of it can be read
+  evidence:
+  - url: https://status.bonsai.io/mcp
+    status: 403
+  - url: https://bonsai.io
+    status: 200
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v5

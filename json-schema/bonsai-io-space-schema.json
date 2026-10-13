@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/bonsai-io/main/json-schema/bonsai-io-space-schema.json",
+  "title": "Space",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/bonsai-io-openapi-generated.yml#/components/schemas/Space",
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string"
+    },
+    "private_network": {
+      "type": "boolean"
+    },
+    "cloud": {
+      "type": "object",
+      "properties": {
+        "provider": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+name: Bonsai Cloud API Conventions
+generated: '2026-10-14'
+method: searched
+source: https://bonsai.io/docs/api/overview/
+auth:
+  style: Bearer or HTTP Basic with bonsai_<key>_<secret> token
+  see: authentication/bonsai-io-authentication.yml
+format: The Bonsai API accepts and returns JSON payloads. No other formats are supported at this time.
+pagination:
+  style: page-number
+  params:
+  - page
+  - size
+  max_page_size: 100
+  response_fields:
+  - pagination.page_number
+  - pagination.page_size
+  - pagination.total_records
+  docs: https://bonsai.io/docs/api/reference/api-result-pagination/
+idempotency:
+  coverage: none
+  note: No idempotency key is documented. Cluster create/update/delete return 202 Accepted with a monitor URL to poll.
+async_operations:
+  pattern: 202 Accepted + monitor URI
+  operations:
+  - createCluster
+  - updateCluster
+  - deleteCluster
+safety:
+  delete_confirmation: deleteCluster requires the cluster's exact name in the body; missing/blank name returns 400, mismatched name 422.
+reversibility:
+  status: none
+  note: No undo or restore of a destroyed cluster is documented in the API reference.
+versioning:
+  stage: alpha
+  note: The Bonsai API is currently in its Alpha release phase. It may not be feature-complete, and is subject to change without notice.
+errors: errors/bonsai-io-problem-types.yml
+rate_limits: rate-limits/bonsai-io-rate-limits.yml

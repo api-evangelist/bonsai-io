@@ -1,0 +1,44 @@
+name: Bonsai Cloud API Errors
+generated: '2026-10-14'
+method: searched
+source: https://bonsai.io/docs/api/errors/
+format: custom-json
+envelope:
+  errors: array of strings
+  status: integer
+problems:
+- status: 400
+  title: Bad Request
+  type: https://bonsai.io/docs/api/errors/
+  description: Bad Request
+  remediation: 'On cluster delete: pass the name of the cluster as `name`.'
+- status: 401
+  title: Unauthorized
+  type: https://bonsai.io/docs/api/errors/401-unauthorized/
+  description: Unauthorized
+  remediation: Check the token key/secret; it may be mistyped, revoked or expired.
+- status: 402
+  title: Payment Required
+  type: https://bonsai.io/docs/api/errors/402-payment-required/
+  description: Payment Required
+  remediation: Resolve account billing.
+- status: 403
+  title: Forbidden
+  type: https://bonsai.io/docs/api/errors/403-forbidden/
+  description: Forbidden
+  remediation: Use a token with the scope the call needs.
+- status: 404
+  title: Not Found
+  type: https://bonsai.io/docs/api/errors/404-not-found/
+  description: Not Found
+  remediation: Check the resource slug.
+- status: 422
+  title: Unprocessable Entity
+  type: https://bonsai.io/docs/api/errors/422-unprocessable-entity/
+  description: Unprocessable Entity
+  remediation: Send valid JSON and an accepted Accept header.
+- status: 429
+  title: Too Many Requests
+  type: https://bonsai.io/docs/api/errors/429-too-many-requests/
+  description: Too Many Requests
+  remediation: Back off; limit is 60 requests per minute per token.

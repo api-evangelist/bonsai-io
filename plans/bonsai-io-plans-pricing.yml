@@ -1,0 +1,104 @@
+name: Bonsai Pricing
+generated: '2026-10-14'
+method: searched
+source: https://bonsai.io/pricing
+audience: business-product
+currency: USD
+note: Managed Elasticsearch/OpenSearch cluster subscriptions; the API itself carries no separate charge on this page. Plan slugs are also listable via the Plans API.
+plans:
+- name: Standard Plan
+  description: Reliable, managed search without the engineering
+  price_text: $25–$400 /mo
+  features:
+  - 24/7 Monitoring & Alerting Coverage
+  - Email Support
+  - OpenSearch or Elasticsearch
+  limits: []
+- name: Business Plan
+  description: Scalable search that keeps pace with your business
+  price_text: $600–$2,500 /mo
+  features:
+  - Off-site backups & disaster recovery
+  - Multi-AZ cloud hosting
+  - BYOC option available
+  limits: []
+- name: Enterprise Plan
+  description: An elite search team added to your staff.
+  price_text: Starting at $5,500 /mo
+  features: []
+  limits: []
+- name: Staging
+  price_text: $15
+  price: 15
+  features: []
+  limits:
+  - Storage 1 GB
+  - Memory 256 MB
+  - Documents 100k
+  - Concurrency 1x / 1x
+- name: Standard Fir
+  price_text: $20
+  price: 20
+  features: []
+  limits:
+  - Storage 1 GB
+  - Memory 256 MB
+  - Documents 500k
+  - Concurrency 1x / 1x
+- name: Standard Elm
+  price_text: $50
+  price: 50
+  features: []
+  limits:
+  - Storage 20 GB
+  - Memory 1 GB
+  - Documents 15M
+  - Concurrency 2x / 2x
+- name: Standard Cork
+  price_text: $150
+  price: 150
+  features: []
+  limits:
+  - Storage 40 GB
+  - Memory 2 GB
+  - Documents 20M
+  - Concurrency 3x / 4x
+- name: Standard Teak
+  price_text: $250
+  price: 250
+  features: []
+  limits:
+  - Storage 70 GB
+  - Memory 3 GB
+  - Documents 25M
+  - Concurrency 5x / 6x
+- name: Standard Oak
+  price_text: $400
+  price: 400
+  features: []
+  limits:
+  - Storage 100 GB
+  - Memory 4 GB
+  - Documents 30M
+  - Concurrency 5x / 6x
+- name: Business L*
+  price_text: Starting at $600
+  features: []
+  limits:
+  - Storage 354 GB -1.4 TB
+  - Memory 12.88GB - 51.54GB
+- name: Business XL*
+  price_text: Starting at $850
+  features: []
+  limits:
+  - Storage 450 GB - 2.81 TB
+  - Memory 24GB - 103GB
+- name: Business 2X*
+  price_text: Starting at $1,700
+  features: []
+  limits:
+  - Storage 1.4 TB - 2.85 TB
+  - Memory 51.54GB - 206GB
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed

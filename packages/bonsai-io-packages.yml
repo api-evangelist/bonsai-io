@@ -1,0 +1,21 @@
+name: Bonsai Packages
+generated: '2026-10-14'
+method: searched
+source: https://registry.terraform.io/providers/omc/bonsai
+packages:
+- name: omc/bonsai
+  registry: terraform
+  url: https://registry.terraform.io/providers/omc/bonsai
+  language: hcl
+  official: true
+  version: 1.0.2
+  published: '2024-08-07'
+  source: https://github.com/omc/terraform-provider-bonsai
+- name: bonsai-elasticsearch-rails
+  registry: rubygems
+  url: https://rubygems.org/gems/bonsai-elasticsearch-rails
+  language: ruby
+  official: true
+  version: 7.0.1
+  published: '2018-08-11'
+  source: https://github.com/omc/bonsai-elasticsearch-rails

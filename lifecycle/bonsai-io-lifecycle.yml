@@ -1,0 +1,7 @@
+name: Bonsai Cloud API Lifecycle
+generated: '2026-10-14'
+method: searched
+source: https://bonsai.io/docs/api/overview/
+versioning: Unversioned base URL https://api.bonsai.io; API is in Alpha release phase and subject to change without notice.
+deprecation: Overview documents a Breaking Changes section; no Sunset/Deprecation headers documented.
+status_page: https://status.bonsai.io/
