@@ -91,20 +91,94 @@ common:
 - type: Support
   url: https://bonsai.io/support
 apis:
-- aid: bonsai-io:bonsai-cloud-api
-  name: Bonsai Cloud API
-  description: REST API for managing Bonsai clusters and exploring plans, releases (Elasticsearch/OpenSearch versions) and spaces (regions). Currently in alpha.
+- aid: bonsai-io:bonsai-io-clusters-api
+  name: Bonsai Clusters API
+  description: The Clusters API from Bonsai — 2 operation(s) for clusters.
   humanURL: https://bonsai.io/docs/api/overview/
   baseURL: https://api.bonsai.io
   tags:
-  - Search
-  - Elasticsearch
-  - OpenSearch
   - Clusters
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/bonsai-io-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/bonsai-io-clusters-api-openapi.yml
+  - type: Documentation
+    url: https://bonsai.io/docs/api/overview/
+  - type: APIReference
+    url: https://bonsai.io/docs/api/reference/
+  - type: Authentication
+    url: https://bonsai.io/docs/api/authentication/overview/
+  - type: JSONSchema
+    url: json-schema/bonsai-io-cluster-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-plan-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-space-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-release-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-pagination-schema.json
+- aid: bonsai-io:bonsai-io-plans-api
+  name: Bonsai Plans API
+  description: The Plans API from Bonsai — 2 operation(s) for plans.
+  humanURL: https://bonsai.io/docs/api/overview/
+  baseURL: https://api.bonsai.io
+  tags:
+  - Plans
+  properties:
+  - type: OpenAPI
+    url: openapi/bonsai-io-plans-api-openapi.yml
+  - type: Documentation
+    url: https://bonsai.io/docs/api/overview/
+  - type: APIReference
+    url: https://bonsai.io/docs/api/reference/
+  - type: Authentication
+    url: https://bonsai.io/docs/api/authentication/overview/
+  - type: JSONSchema
+    url: json-schema/bonsai-io-cluster-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-plan-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-space-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-release-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-pagination-schema.json
+- aid: bonsai-io:bonsai-io-releases-api
+  name: Bonsai Releases API
+  description: The Releases API from Bonsai — 2 operation(s) for releases.
+  humanURL: https://bonsai.io/docs/api/overview/
+  baseURL: https://api.bonsai.io
+  tags:
+  - Releases
+  properties:
+  - type: OpenAPI
+    url: openapi/bonsai-io-releases-api-openapi.yml
+  - type: Documentation
+    url: https://bonsai.io/docs/api/overview/
+  - type: APIReference
+    url: https://bonsai.io/docs/api/reference/
+  - type: Authentication
+    url: https://bonsai.io/docs/api/authentication/overview/
+  - type: JSONSchema
+    url: json-schema/bonsai-io-cluster-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-plan-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-space-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-release-schema.json
+  - type: JSONSchema
+    url: json-schema/bonsai-io-pagination-schema.json
+- aid: bonsai-io:bonsai-io-spaces-api
+  name: Bonsai Spaces API
+  description: The Spaces API from Bonsai — 2 operation(s) for spaces.
+  humanURL: https://bonsai.io/docs/api/overview/
+  baseURL: https://api.bonsai.io
+  tags:
+  - Spaces
+  properties:
+  - type: OpenAPI
+    url: openapi/bonsai-io-spaces-api-openapi.yml
   - type: Documentation
     url: https://bonsai.io/docs/api/overview/
   - type: APIReference
