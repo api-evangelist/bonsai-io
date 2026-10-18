@@ -102,3 +102,82 @@ plans:
 pricing_basis: tiered-subscription
 delivery:
   delivery: managed
+x-canonical:
+  generated: '2026-10-18'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: Standard Plan
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Business Plan
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise Plan
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Staging
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Standard Fir
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Standard Elm
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Standard Cork
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Standard Teak
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Standard Oak
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Business L*
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Business XL*
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Business 2X*
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
