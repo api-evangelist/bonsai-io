@@ -14,6 +14,14 @@ tags:
 - Search
 - Elasticsearch
 - OpenSearch
+- Managed Service
+- Vector Search
+- Cloud Infrastructure
+tags_raw:
+- Company
+- Search
+- Elasticsearch
+- OpenSearch
 - Managed Services
 - Vector Search
 - Cloud Infrastructure
@@ -97,6 +105,8 @@ apis:
   humanURL: https://bonsai.io/docs/api/overview/
   baseURL: https://api.bonsai.io
   tags:
+  - Cluster
+  tags_raw:
   - Clusters
   properties:
   - type: OpenAPI
